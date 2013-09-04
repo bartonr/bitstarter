@@ -8,6 +8,7 @@ app.get('/', function(request, response) {
 });
 
 var port = process.env.PORT || 8080;
+app.use("/static",express.static(__dirname+"/static"));
 app.listen(port, function() {
   console.log("Listening on " + port);
 });
